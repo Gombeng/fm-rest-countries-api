@@ -105,7 +105,7 @@ function App() {
                   <img
                     src={country.flag}
                     alt=""
-                    className="w-full overflow-hidden rounded-t-md h-36"
+                    className="w-full overflow-hidden rounded-t-md"
                   />
                 </div>
                 <div className="p-5">
