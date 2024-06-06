@@ -1,3 +1,37 @@
 ion-icon {
   font-size: 24px;
 }
+
+/* Dark Mode Styles */
+.bg-very-dark-blue-bg {
+  background-color: #202c37;
+}
+
+.bg-dark-blue {
+  background-color: #2b3945;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-dark-gray {
+  color: #858585;
+}
+
+/* Light Mode Styles */
+.light-mode .bg-very-dark-blue-bg {
+  background-color: hsl(0, 0%, 98%);
+}
+
+.light-mode .bg-dark-blue {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.light-mode .text-white {
+  color: black;
+}
+
+.light-mode .text-dark-gray {
+  color: #555555;
+}
