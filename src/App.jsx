@@ -4,7 +4,7 @@ import data from "./assets/data.json";
 const regions = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
 
 function App() {
-  const [countryData, setCountryData] = useState(data);
+  const [countryData, setCountryData] = useState([]);
   const [toggleMode, setToggleMode] = useState(false);
   const [toggleDropdown, setToggleDropdown] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -37,12 +37,12 @@ function App() {
     updateCountryData(filteredData);
   };
 
-  // useEffect(() => {
-  //   updateCountryData(data);
-  // }, []);
+  useEffect(() => {
+    updateCountryData(data);
+  }, []);
 
   return (
-    <div className="bg-very-dark-blue-bg w-screen min-h-screen h-fit  text-white">
+    <div className="bg-very-dark-blue-bg min-w-screen min-h-screen h-fit text-white">
       <div className="bg-dark-blue mb-5">
         <div className="max-w-screen-xl mx-auto p-5 flex justify-between items-center">
           <p className="font-bold">Where in the world?</p>
