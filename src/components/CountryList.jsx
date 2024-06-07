@@ -11,7 +11,7 @@ const CountryList = ({ countries }) => {
           <Link to={`/country/${country.name}`}>
             <img
               src={country.flag}
-              alt={countries.name}
+              alt={`${country.name} flag`}
               className="w-full overflow-hidden rounded-t-md"
             />
             <div className="p-5">
