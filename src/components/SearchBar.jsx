@@ -12,7 +12,7 @@ const SearchBar = ({ onSearch }) => {
       <input
         onChange={handleSearch}
         type="text"
-        className="w-full rounded-md border-none outline-none bg-dark-blue ps-24 p-5"
+        className="w-full rounded-md border-none outline-none bg-dark-blue ps-24 p-5 transition-all duration-300"
         placeholder="Search for a country..."
       />
     </div>

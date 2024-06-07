@@ -4,6 +4,8 @@ import Detail from "./pages/Detail";
 import Header from "./components/Header";
 import { useEffect, useState } from "react";
 
+// TODO: Add hover effect to button or card
+
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const handleToggle = (setter) => {

@@ -29,8 +29,8 @@ function Home() {
   };
 
   return (
-    <div className="bg-very-dark-blue-bg min-w-screen min-h-screen h-fit text-white p-5 pt-24">
-      <div className="max-w-screen-xl mx-auto flex justify-between flex-col md:flex-row gap-5 ">
+    <div className="bg-very-dark-blue-bg min-w-screen min-h-screen h-fit text-white p-5 pt-24 transition-all duration-300">
+      <div className="max-w-screen-xl mx-auto flex justify-between flex-col md:flex-row gap-5 mb-2">
         <SearchBar onSearch={handleSearch} />
         <DropdownFilter
           onRegionClick={handleRegionClickWrapper}

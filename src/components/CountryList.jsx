@@ -4,10 +4,11 @@ import { Heading, Paragraph } from "./FreeText";
 import { formatNumberWithCommas } from "../utils";
 
 const CountryList = ({ countries }) => {
+  console.log('countries: ', countries);
   return (
-    <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 py-5">
+    <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7 py-5">
       {countries.map((country) => (
-        <div key={country.name} className="bg-dark-blue rounded-md shadow-md">
+        <div key={country.name} className="bg-dark-blue rounded-md shadow-md transition-all duration-300 hover:opacity-80 hover:scale-105">
           <Link to={`/country/${country.name}`}>
             <img
               src={country.flag}

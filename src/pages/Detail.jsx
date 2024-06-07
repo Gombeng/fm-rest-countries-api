@@ -35,7 +35,7 @@ function Detail() {
   };
 
   return (
-    <div className="bg-very-dark-blue-bg min-w-screen min-h-screen h-fit text-white p-5 pt-20">
+    <div className="bg-very-dark-blue-bg min-w-screen min-h-screen h-fit text-white p-5 pt-20 transition-all duration-300">
       {isLoading ? (
         <FreeText>Loading...</FreeText>
       ) : !country ? (
@@ -44,7 +44,7 @@ function Detail() {
         <div className="max-w-screen-xl mx-auto p-5">
           <button
             onClick={handleBack}
-            className="bg-dark-blue shadow-md rounded-sm py-2 px-8 flex items-center gap-1 mt-5 mb-16 lg:mb-0"
+            className="bg-dark-blue shadow-md rounded-sm py-2 px-8 flex items-center gap-1 mt-5 mb-16 lg:mb-0 transition-all duration-300 hover:opacity-90"
           >
             <Icon name="arrow-back-outline" />
             Back
@@ -67,7 +67,7 @@ function CountryDetails({ country }) {
         />
       </div>
       <div className="my-16">
-        <Heading className={"mb-5 text-2xl"}>{country.name}</Heading>
+        <Heading className={"mb-5 text-3xl"}>{country.name}</Heading>
         <CountryInfo country={country} />
         <CountryBorders country={country} />
       </div>
@@ -93,7 +93,7 @@ function CountryInfo({ country }) {
           name={"Top Level Domain"}
           value={country.topLevelDomain[0]}
         />
-        <Paragraph name={"Currencies"} value={country.currencies[0].name} />
+        <Paragraph name={"Currencies"} value={`( ${country.currencies[0].symbol} ) ${country.currencies[0].name}`} />
         <Paragraph name={"Languages"} value={languages(country.languages)} />
       </div>
     </div>
@@ -110,7 +110,7 @@ function CountryBorders({ country }) {
           : country.borders.map((alpha3Code) => (
               <span
                 key={alpha3Code}
-                className="p-1 px-7 bg-dark-blue shadow-md rounded-sm"
+                className="p-1 px-7 bg-dark-blue shadow-md rounded-sm transition-all duration-300"
               >
                 {getCountryNameByAlpha3Code(data, alpha3Code)}
               </span>
